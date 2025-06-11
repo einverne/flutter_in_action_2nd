@@ -1,10 +1,8 @@
-
-
 # 11.3 Http请求库-dio
 
 通过上一节介绍，我们可以发现直接使用HttpClient发起网络请求是比较麻烦的，很多事情得我们手动处理，如果再涉及到文件上传/下载、Cookie管理等就会非常繁琐。幸运的是，Dart社区有一些第三方http请求库，用它们来发起http请求将会简单的多，本节我们介绍一下目前人气较高的[dio](https://github.com/flutterchina/dio)库。
 
->  dio是笔者维护的一个强大的Dart Http请求库，支持Restful API、FormData、拦截器、请求取消、Cookie管理、文件上传/下载、超时等。dio的使用方式随着其版本升级可能会发生变化，如果本节所述内容和最新dio功能有差异，请以最新的dio文档为准。
+> dio是笔者维护的一个强大的Dart Http请求库，支持Restful API、FormData、拦截器、请求取消、Cookie管理、文件上传/下载、超时等。dio的使用方式随着其版本升级可能会发生变化，如果本节所述内容和最新dio功能有差异，请以最新的dio文档为准。
 
 ## 11.3.1 引入dio
 
@@ -19,7 +17,7 @@ dependencies:
 
 ```dart
 import 'package:dio/dio.dart';
-Dio dio =  Dio();
+Dio dio = Dio();
 ```
 
 接下来就可以通过 dio实例来发起网络请求了，注意，一个dio实例可以发起多个http请求，一般来说，APP只有一个http数据源时，dio应该使用单例模式。
@@ -88,7 +86,7 @@ FormData formData = FormData.from({
 response = await dio.post("/info", data: formData)
 ```
 
-值得一提的是，dio内部仍然使用HttpClient发起的请求，所以代理、请求认证、证书校验等和HttpClient是相同的，我们可以在`onHttpClientCreate `回调中设置，例如：
+值得一提的是，dio内部仍然使用 HttpClient 发起的请求，所以代理、请求认证、证书校验等和HttpClient是相同的，我们可以在`onHttpClientCreate `回调中设置，例如：
 
 ```dart
 (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (client) {

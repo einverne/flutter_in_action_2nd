@@ -28,7 +28,7 @@ Dart IO库中提供了用于发起Http请求的一些类，我们可以直接使
    ```dart
    request.headers.add("user-agent", "test");
    ```
-   如果是post或put等可以携带请求体方法，可以通过HttpClientRequest对象发送请求体，如：
+   如果是POST或PUT等可以携带请求体方法，可以通过HttpClientRequest对象发送请求体，如：
 
    ```dart
    String payload="...";

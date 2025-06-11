@@ -73,12 +73,12 @@ class _ScaffoldRouteState extends State<ScaffoldRoute> {
 
 上面代码中我们用到了如下组件：
 
-| 组件名称             | 解释           |
-| -------------------- | -------------- |
+| 组件名称                 | 解释      |
+|----------------------|---------|
 | AppBar               | 一个导航栏骨架 |
-| MyDrawer             | 抽屉菜单       |
-| BottomNavigationBar  | 底部导航栏     |
-| FloatingActionButton | 漂浮按钮       |
+| MyDrawer             | 抽屉菜单    |
+| BottomNavigationBar  | 底部导航栏   |
+| FloatingActionButton | 漂浮按钮    |
 
 下面我们来分别介绍一下它们。
 
@@ -127,8 +127,6 @@ Scaffold(
 可以看到左侧菜单已经替换成功。
 
 代码中打开抽屉菜单的方法在`ScaffoldState`中，通过`Scaffold.of(context)`可以获取父级最近的`Scaffold` 组件的`State`对象。
-
-
 
 ## 5.7.3 抽屉菜单Drawer
 

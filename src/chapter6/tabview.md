@@ -2,6 +2,16 @@
 
 TabBarView 是 Material 组件库中提供了 Tab 布局组件，通常和 TabBar 配合使用。
 
+TabBar 是一个实现 Material Design 标签页导航的组件。它通常放置在 AppBar 的下方，用于在不同的视图或内容板块之间切换，是构建直观用户界面的关键元素。TabBar 使得用户可以高效地管理和访问单个屏幕内的不同内容或功能，常见于社交媒体和新闻应用中。
+
+要实现一个功能完整的标签页布局，通常需要以下几个组件协同工作：
+
+- TabController: 这是标签页系统的“大脑”，负责同步 TabBar 中的标签页选择和 TabBarView 中显示的内容。它可以自动创建（通过  DefaultTabController）或手动创建。
+- TabBar: 显示水平排列的标签行，即用户可以看到和点击的标签栏本身。
+- Tab: TabBar 中的单个标签项，可以包含文本和/或图标。
+- TabBarView: 一个可以左右滑动的页面视图，用于显示与当前选中标签页相对应的内容。
+
+
 ## 6.9.1 TabBarView 
 
 TabBarView 封装了 PageView，它的构造方法很简单
